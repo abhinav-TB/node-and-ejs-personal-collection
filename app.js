@@ -7,7 +7,15 @@ app.get('/',function(req,res){
 app.get('/contact',function(req,res){
     res.sendfile(__dirname+'/contact.html');
 });
+// app.get('/profile/:id',function(req,res){
+//     res.send('you request to see a profile with theid of'+req.params.id);
+// });
 app.get('/profile/:id',function(req,res){
-    res.send('you request to see a profile with theid of'+req.params.id)
-});;
+    var data ={
+        age:19,
+        job:'developper',
+        hobbies:['eating','fishing','programmimg']
+    };
+    res.render('profile',{person: req.params.id,data:data});
+});
 app.listen(3000);
