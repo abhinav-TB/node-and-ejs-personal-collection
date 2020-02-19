@@ -32,16 +32,8 @@
            contact us
        </h1> 
        <h2> its me</h2>
-       <form id ="contact form" method="post" action="/contact">
-           <label for="who">who do you want to contact</label><br>
-           <input type="text" name="who" value="<%= qs.person%>"><br>
-           <label for="dept" ></label>which department</label><br>
-           <input type="text" name="dept"value="<%=qs.dept%>"><br>
-           <label for="email">email</label><br>
-           <input type="email" name="email"/><br>
-           <input type ="submit" value=submit>
-
-
-       </form>
+       <p>thanks for getting in touch</p>
+       <p>you contacted<%=data.who%> in the <%=data.dept%> department</p>
+       <p>we will reply you at <%=data.email%></p>
     </body>
 </html>
