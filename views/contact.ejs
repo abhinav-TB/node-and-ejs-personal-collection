@@ -17,6 +17,14 @@
             text-align: center;
 
             }
+             input {
+                 width:100%;
+                 padding: 10px ;
+                 margin:8px;
+                 display:inline-block;
+                 border: 1px solid rgb(204, 100, 114);
+             }
+            
         </style>
     </head>
     <body>
@@ -24,5 +32,16 @@
            contact us
        </h1> 
        <h2> its me</h2>
+       <form id ="contact form">
+           <label for="who">who do you want to contact</label><br>
+           <input type="text" name="who" value="<%= qs.person%>"><br>
+           <label for="dept" ></label>which department</label><br>
+           <input type="text" name="dept"value="<%=qs.dept%>"><br>
+           <label for="email">email</label><br>
+           <input type="email" name="email"/><br>
+           <input type ="submit" value=submit>
+
+
+       </form>
     </body>
 </html>
